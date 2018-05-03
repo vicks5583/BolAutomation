@@ -1,0 +1,79 @@
+package com.automation.Desktop.TestCases;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+
+import com.automation.DSLLib.DSLLibDesktop;
+
+public class BolwalaClass {
+	
+	  DSLLibDesktop dsl;
+  
+	  @BeforeClass
+	  public void beforeClass() {
+		  	dsl = new DSLLibDesktop();
+		  	dsl.launchBolwala();
+		  	//dsl.launchGoogle();
+	  }
+	  
+	  @Test
+	  public void Test01_Verify_Bolwala_Title(){
+		  dsl.bolwalaclass.CheckBolwalaTitle();
+	  }
+	  
+	  @Test
+	  public void Test02_Verify_Bolwala_Logo() {
+			  dsl.bolwalaclass.CheckBolwalaLogo();
+	  }
+	  
+	  @Test
+	  public void Test03_Verify_Bolwala_Categories() {
+			  dsl.bolwalaclass.CheckCategories();
+	  }
+	  
+	  @Test
+	  public void Test04_Verify_Bolwala_For_Sellers_Link() {
+			  dsl.bolwalaclass.CheckLinkForSellers();
+	  }
+	  
+	  @Test
+	  public void Test05_Verify_Bolwala_Login_Link() {
+			  dsl.bolwalaclass.CheckLinkForLogin();
+	  }
+	  
+	  @Test
+	  public void Test06_Verify_Bolwala_Signup_Link() {
+			  dsl.bolwalaclass.CheckLinkForSignup();
+	  }
+	  
+	  @Test
+	  public void Test07_Verify_Bolwala_Search_Field() {
+			  dsl.bolwalaclass.CheckSearchField();
+	  }
+	  
+	  @Test
+	  public void Test08_Verify_Top_Banner() {
+			  dsl.bolwalaclass.CheckTopBanner();
+	  }
+	  
+	  @Test
+	  public void Test09_Verify_Bolwala_Product_Tabs() {
+			  dsl.bolwalaclass.CheckProductTabs();
+	  }
+	  
+	  @Test
+	  public void Test10_Verify_First_Product_Presence() {
+			  dsl.bolwalaclass.CheckFirstProduct();
+	  }
+	  
+	  @Test
+	  public void Test11_Search_Verify_Redirect() {
+			  dsl.bolwalaclass.Search_Case1();
+	  }
+	  
+	  @AfterClass
+	  public void afterClass() {
+		  dsl.closeBrowser();
+	  }
+}
